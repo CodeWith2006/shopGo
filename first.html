@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="first.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopgo.com</title>
+</head>
+<body style="padding-top: 90px;">
+    <div class="logo-block">
+        <img src="logo.png" alt="Company Logo" tabindex="0" class="logo-img" onerror="this.style.display='none';">
+    </div>
+    <div class="logo-text">ShopGo</div>
+    <div class="logo-tagline">Explore Plus <span class="plus-highlight">+</span></div>
+    <div class="main-content-block">
+        <div class="quick-access-bar">
+            <div class="quick-access-left">
+                <a href="first.html" class="quick-link home-link">Home</a>
+                <a href="profile.html" class="quick-link">Profile</a>
+                <a href="orders.html" class="quick-link">Orders</a>
+                <a href="login.html" id="quickLoginBtn" class="quick-link">Login</a>
+                <a href="cart.html" id="topCartBtn" class="cart-link" aria-label="View cart">🛒 Cart</a>
+                <input type="text" class="search-bar" placeholder="Search for products..." aria-label="Search for products">
+                <button onclick="per"
+            </div>
+            <div class="quick-access-right">
+                <button id="threeDotMenuBtn" class="three-dot-btn">&#8942;</button>
+                <div id="threeDotDropdown" class="three-dot-dropdown">
+                    <a href="settings.html">Settings</a>
+                    <a href="help.html">Help</a>
+                    <a href="logout.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="nav-bar">
+                <!-- Removed cart and login buttons from below the logo -->
+            </div>
+        </header>
+        <!-- OTP Modal for Login -->
+        <div id="otpModal" class="otp-modal">
+            <div class="otp-modal-content">
+                <h2>Login with Email</h2>
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                <button id="sendOtpBtn" class="btn-style">Send OTP</button>
+                <button id="closeOtpModal" class="close-otp-btn">Cancel</button>
+            </div>
+        </div>
+        <main>
+            <div class="product-listing">
+                <div src="logo-container"></div>
+                <div class="products-grid">
+                    <div class="product" tabindex="0" aria-label="Black Pen">
+                        <img src="product.jpg" alt="Black Pen" tabindex="0">
+                        <h2>Black Pen</h2>
+                        <p>Automatic spring ballpoint pen in black case. School or office tool.</p>
+                        <p>Price: Rs. <span id="price">200</span></p>
+                        <div>
+                            <label for="Quantity">Quantity:</label>
+                            <button id="increaseQuantityBtn" aria-label="Increase Black Pen quantity">+</button>
+                            <input type="text" id="Quantity" value="0" aria-label="Black Pen quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn" aria-label="Decrease Black Pen quantity">-</button>
+                        </div>
+                        <button id="button2" class="btn-buy" aria-label="Add Black Pen to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Blue Pen">
+                        <img src="product2.jpg" alt="Blue Pen" tabindex="0">
+                        <h2>Blue Pen</h2>
+                        <p>Blue ballpoint pen in plastic case. Great for school and office use.</p>
+                        <p>Price: Rs. <span id="price2">150</span></p>
+                        <div>
+                            <label for="Quantity2">Quantity:</label>
+                            <button id="increaseQuantityBtn2" aria-label="Increase Blue Pen quantity">+</button>
+                            <input type="text" id="Quantity2" value="0" aria-label="Blue Pen quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn2" aria-label="Decrease Blue Pen quantity">-</button>
+                        </div>
+                        <button id="button3" class="btn-buy" aria-label="Add Blue Pen to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Red Pen">
+                        <img src="product3.jpg" alt="Red Pen" tabindex="0">
+                        <h2>Red Pen</h2>
+                        <p>Red ballpoint pen for marking and highlighting important notes.</p>
+                        <p>Price: Rs. <span id="price3">180</span></p>
+                        <div>
+                            <label for="Quantity3">Quantity:</label>
+                            <button id="increaseQuantityBtn3" aria-label="Increase Red Pen quantity">+</button>
+                            <input type="text" id="Quantity3" value="0" aria-label="Red Pen quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn3" aria-label="Decrease Red Pen quantity">-</button>
+                        </div>
+                        <button id="button4" class="btn-buy" aria-label="Add Red Pen to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Green Pen">
+                        <img src="product4.jpg" alt="Green Pen" tabindex="0">
+                        <h2>Green Pen</h2>
+                        <p>Green ballpoint pen for corrections and creative work.</p>
+                        <p>Price: Rs. <span id="price4">170</span></p>
+                        <div>
+                            <label for="Quantity4">Quantity:</label>
+                            <button id="increaseQuantityBtn4" aria-label="Increase Green Pen quantity">+</button>
+                            <input type="text" id="Quantity4" value="0" aria-label="Green Pen quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn4" aria-label="Decrease Green Pen quantity">-</button>
+                        </div>
+                        <button id="button5" class="btn-buy" aria-label="Add Green Pen to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Headphones">
+                        <img src="product5.jpg" alt="Headphones" tabindex="0">
+                        <h2>Headphones</h2>
+                        <p>Wireless over-ear headphones with deep bass and long battery life.</p>
+                        <p>Price: Rs. <span id="price5">1200</span></p>
+                        <div>
+                            <label for="Quantity5">Quantity:</label>
+                            <button id="increaseQuantityBtn5" aria-label="Increase Headphones quantity">+</button>
+                            <input type="text" id="Quantity5" value="0" aria-label="Headphones quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn5" aria-label="Decrease Headphones quantity">-</button>
+                        </div>
+                        <button id="button6" class="btn-buy" aria-label="Add Headphones to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Mobile Phone">
+                        <img src="product6.jpg" alt="Mobile Phone" tabindex="0">
+                        <h2>Mobile Phone</h2>
+                        <p>Latest Android smartphone with 64MP camera and AMOLED display.</p>
+                        <p>Price: Rs. <span id="price6">15999</span></p>
+                        <div>
+                            <label for="Quantity6">Quantity:</label>
+                            <button id="increaseQuantityBtn6" aria-label="Increase Mobile Phone quantity">+</button>
+                            <input type="text" id="Quantity6" value="0" aria-label="Mobile Phone quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn6" aria-label="Decrease Mobile Phone quantity">-</button>
+                        </div>
+                        <button id="button7" class="btn-buy" aria-label="Add Mobile Phone to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Water Bottle">
+                        <img src="product7.jpg" alt="Water Bottle" tabindex="0">
+                        <h2>Water Bottle</h2>
+                        <p>Stainless steel insulated water bottle, 1L, keeps drinks hot/cold.</p>
+                        <p>Price: Rs. <span id="price7">399</span></p>
+                        <div>
+                            <label for="Quantity7">Quantity:</label>
+                            <button id="increaseQuantityBtn7" aria-label="Increase Water Bottle quantity">+</button>
+                            <input type="text" id="Quantity7" value="0" aria-label="Water Bottle quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn7" aria-label="Decrease Water Bottle quantity">-</button>
+                        </div>
+                        <button id="button8" class="btn-buy" aria-label="Add Water Bottle to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Backpack">
+                        <img src="product8.jpg" alt="Backpack" tabindex="0">
+                        <h2>Backpack</h2>
+                        <p>Trendy 30L backpack for school, college, or travel. Water resistant.</p>
+                        <p>Price: Rs. <span id="price8">799</span></p>
+                        <div>
+                            <label for="Quantity8">Quantity:</label>
+                            <button id="increaseQuantityBtn8" aria-label="Increase Backpack quantity">+</button>
+                            <input type="text" id="Quantity8" value="0" aria-label="Backpack quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn8" aria-label="Decrease Backpack quantity">-</button>
+                        </div>
+                        <button id="button9" class="btn-buy" aria-label="Add Backpack to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Smartwatch">
+                        <img src="product9.jpg" alt="Smartwatch" tabindex="0">
+                        <h2>Smartwatch</h2>
+                        <p>Bluetooth calling, fitness tracking, AMOLED display, long battery life.</p>
+                        <p>Price: Rs. <span id="price9">2499</span></p>
+                        <div>
+                            <label for="Quantity9">Quantity:</label>
+                            <button id="increaseQuantityBtn9" aria-label="Increase Smartwatch quantity">+</button>
+                            <input type="text" id="Quantity9" value="0" aria-label="Smartwatch quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn9" aria-label="Decrease Smartwatch quantity">-</button>
+                        </div>
+                        <button id="button10" class="btn-buy" aria-label="Add Smartwatch to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Laptop">
+                        <img src="product10.jpg" alt="Laptop" tabindex="0">
+                        <h2>Laptop</h2>
+                        <p>Intel i5, 8GB RAM, 512GB SSD, 15.6" FHD display, Windows 11.</p>
+                        <p>Price: Rs. <span id="price10">42999</span></p>
+                        <div>
+                            <label for="Quantity10">Quantity:</label>
+                            <button id="increaseQuantityBtn10" aria-label="Increase Laptop quantity">+</button>
+                            <input type="text" id="Quantity10" value="0" aria-label="Laptop quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn10" aria-label="Decrease Laptop quantity">-</button>
+                        </div>
+                        <button id="button11" class="btn-buy" aria-label="Add Laptop to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Shoes">
+                        <img src="product11.jpg" alt="Shoes" tabindex="0">
+                        <h2>Shoes</h2>
+                        <p>Men's running shoes, lightweight, breathable, stylish design.</p>
+                        <p>Price: Rs. <span id="price11">1299</span></p>
+                        <div>
+                            <label for="Quantity11">Quantity:</label>
+                            <button id="increaseQuantityBtn11" aria-label="Increase Shoes quantity">+</button>
+                            <input type="text" id="Quantity11" value="0" aria-label="Shoes quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn11" aria-label="Decrease Shoes quantity">-</button>
+                        </div>
+                        <button id="button12" class="btn-buy" aria-label="Add Shoes to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="T-shirt">
+                        <img src="product12.jpg" alt="T-shirt" tabindex="0">
+                        <h2>T-shirt</h2>
+                        <p>100% cotton, round neck, regular fit, assorted colors.</p>
+                        <p>Price: Rs. <span id="price12">499</span></p>
+                        <div>
+                            <label for="Quantity12">Quantity:</label>
+                            <button id="increaseQuantityBtn12" aria-label="Increase T-shirt quantity">+</button>
+                            <input type="text" id="Quantity12" value="0" aria-label="T-shirt quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn12" aria-label="Decrease T-shirt quantity">-</button>
+                        </div>
+                        <button id="button13" class="btn-buy" aria-label="Add T-shirt to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Mixer Grinder">
+                        <img src="product13.jpg" alt="Mixer Grinder" tabindex="0">
+                        <h2>Mixer Grinder</h2>
+                        <p>750W, 3 jars, stainless steel blades, 2-year warranty.</p>
+                        <p>Price: Rs. <span id="price13">2199</span></p>
+                        <div>
+                            <label for="Quantity13">Quantity:</label>
+                            <button id="increaseQuantityBtn13" aria-label="Increase Mixer Grinder quantity">+</button>
+                            <input type="text" id="Quantity13" value="0" aria-label="Mixer Grinder quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn13" aria-label="Decrease Mixer Grinder quantity">-</button>
+                        </div>
+                        <button id="button14" class="btn-buy" aria-label="Add Mixer Grinder to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Refrigerator">
+                        <img src="product14.jpg" alt="Refrigerator" tabindex="0">
+                        <h2>Refrigerator</h2>
+                        <p>190L, single door, 3-star, direct cool, energy efficient.</p>
+                        <p>Price: Rs. <span id="price14">15499</span></p>
+                        <div>
+                            <label for="Quantity14">Quantity:</label>
+                            <button id="increaseQuantityBtn14" aria-label="Increase Refrigerator quantity">+</button>
+                            <input type="text" id="Quantity14" value="0" aria-label="Refrigerator quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn14" aria-label="Decrease Refrigerator quantity">-</button>
+                        </div>
+                        <button id="button15" class="btn-buy" aria-label="Add Refrigerator to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="Book">
+                        <img src="product15.jpg" alt="Book" tabindex="0">
+                        <h2>Book</h2>
+                        <p>Bestselling novel, paperback, English, 350 pages.</p>
+                        <p>Price: Rs. <span id="price15">299</span></p>
+                        <div>
+                            <label for="Quantity15">Quantity:</label>
+                            <button id="increaseQuantityBtn15" aria-label="Increase Book quantity">+</button>
+                            <input type="text" id="Quantity15" value="0" aria-label="Book quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn15" aria-label="Decrease Book quantity">-</button>
+                        </div>
+                        <button id="button16" class="btn-buy" aria-label="Add Book to cart">Add to cart</button>
+                    </div>
+                    <div class="product" tabindex="0" aria-label="TV">
+                        <img src="product16.jpg" alt="TV" tabindex="0">
+                        <h2>TV</h2>
+                        <p>32" HD Ready LED Smart TV, built-in WiFi, 2 HDMI ports.</p>
+                        <p>Price: Rs. <span id="price16">11999</span></p>
+                        <div>
+                            <label for="Quantity16">Quantity:</label>
+                            <button id="increaseQuantityBtn16" aria-label="Increase TV quantity">+</button>
+                            <input type="text" id="Quantity16" value="0" aria-label="TV quantity" inputmode="numeric" pattern="[0-9]*">
+                            <button id="decreaseQuantityBtn16" aria-label="Decrease TV quantity">-</button>
+                        </div>
+                        <button id="button17" class="btn-buy" aria-label="Add TV to cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="first.js"></script>
+</body>
+</html>

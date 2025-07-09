@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help</title>
+  <link rel="stylesheet" href="first.css">
+</head>
+<body>
+  <div class="quick-access-bar" style="width:100%;background:#232f3e;color:#fff;padding:8px 0;display:flex;align-items:center;justify-content:space-between;position:fixed;top:0;left:0;z-index:3000;">
+    <div style="margin-left:20px;display:flex;gap:18px;align-items:center;">
+        <a href="first.html" style="color:#fff;text-decoration:none;font-weight:bold;">Home</a>
+        <a href="profile.html" style="color:#fff;text-decoration:none;">Profile</a>
+        <a href="orders.html" style="color:#fff;text-decoration:none;">Orders</a>
+        <a href="cart.html" style="color:#fff;text-decoration:none;">🛒 Cart</a>
+        <input type="text" class="search-bar" placeholder="Search for products..." aria-label="Search for products" style="margin-left:18px;padding:4px 10px;border-radius:4px;border:none;min-width:180px;max-width:260px;outline:none;color:#232f3e;">
+    </div>
+    <div style="margin-right:20px;position:relative;">
+        <button id="threeDotMenuBtn" style="font-size:22px;background:none;border:none;color:#fff;cursor:pointer;">&#8942;</button>
+        <div id="threeDotDropdown" style="display:none;position:absolute;right:0;top:32px;background:#fff;min-width:120px;box-shadow:0 2px 8px rgba(0,0,0,0.15);border-radius:6px;z-index:10000;">
+            <a href="settings.html" style="display:block;padding:10px 16px;text-decoration:none;color:#333;">Settings</a>
+            <a href="help.html" style="display:block;padding:10px 16px;text-decoration:none;color:#333;">Help</a>
+            <a href="logout.html" style="display:block;padding:10px 16px;text-decoration:none;color:#333;">Logout</a>
+        </div>
+    </div>
+  </div>
+  <header class="nav-bar">
+    <a href="first.html">Home</a> / Help
+  </header>
+  <main>
+    <h1>Help</h1>
+    <p>This is a placeholder for the help page.</p>
+    <button onclick="showHelp()" class="btn-style">Show Help</button>
+     <h2>Frequently Asked Questions</h2>
+    <ul style="margin-top:20px;">
+      <li><strong>How do I add items to my cart?</strong><br>Go to the home page, select the quantity, and click "Add to cart" for the product you want.</li>
+      <li><strong>How do I view my cart?</strong><br>Click the 🛒 Cart icon in the top bar or in the navigation menu.</li>
+      <li><strong>How do I place an order?</strong><br>Go to your cart and click the "Buy Now" button to complete your purchase.</li>
+      <li><strong>Where can I see my past orders?</strong><br>Click on "Orders" in the top bar to view your order history.</li>
+      <li><strong>How do I update my profile?</strong><br>Go to the "Profile" page and click the "Update Profile" button.</li>
+      <li><strong>How do I log out?</strong><br>Click on "Logout" in the top bar or menu to log out and clear your data.</li>
+      <li><strong>Who do I contact for support?</strong><br>Email support@example.com or use the "Show Help" button for more info.</li>
+    </ul>
+    <script>
+      function showHelp() {
+        alert('For assistance, contact support@example.com or check the FAQ. (Demo)');
+      }
+    </script>
+  </main>
+</body>
+</html>
